@@ -12,7 +12,7 @@
       <ul class="header__links">
         <li><a href="#" class="header__link">Покрытия и градиенты</a></li>
         <li><a href="#" class="header__link">Велосипеды</a></li>
-        <li><a href="#" class="header__link">Тренировки</a></li>
+        <li><a href="#training" class="header__link">Тренировки</a></li>
       </ul>
     </nav>
   </header>
@@ -26,9 +26,104 @@
       <p class="lead__bike-title">Cannondale Systemsix</p>
     </div>
     <div class="lead__image-container">
-      <img class="lead__image" src="./images/lead-image.jpg">
-      <img class="lead__bike-fix" src="./images/bike-fix.png">
+      <img class="lead__image" src="./images/lead-image.jpg" alt="Дорога посреди леса">
+      <img class="lead__bike-fix" src="./images/bike-fix.png" alt="Велосипед Cannondale Systemsix">
     </div>
+  </section>
+  <section class="eddie section">
+    <img class="eddie__image" src="./images/eddie-image.png" alt="Дорога у горы">
+    <figure class="eddie__quote-container">
+      <blockquote class="eddie__quote">
+        «Катайся много или мало, долго или коротко, как хочешь - но катайся»
+      </blockquote>
+      <figcaption class="eddie__author">
+        <p class="eddie__author-name">Эдди Меркс</p>
+        <p class="eddie__author-occupation">Велогонщик</p>
+      </figcaption>
+    </figure>
+  </section>
+  <section class="track section">
+    <div class="section__about track__about track__about_type_highway track__about_active">
+      <h2 class="section__title">Шоссе</h2>
+      <p class="section__description">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+    </div>
+    <div class="section__about track__about track__about_type_tt">
+      <h2 class="section__title">Шоссе</h2>
+      <p class="section__description">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+    </div>
+    <div class="section__about track__about track__about_type_gravel">
+      <h2 class="section__title">Шоссе</h2>
+      <p class="section__description">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+    </div>
+    <ul class="track__images">
+      <li class="track__image-container"><img class="track__image track__image_type_prev"></li>
+      <li class="track__image-container"><img class="track__image track__image_type_current"></li>
+      <li class="track__image-container"><img class="track__image track__image_type_next"></li>
+      <li class="track__image-container"><img class="track__image track__image_type_prev"></li>
+    </ul>
+  </section>
+  <section class="bikes section">
+    <div class="bikes__heading">
+      <h2 class="section__title"></h2>
+      <ul class="bikes__types">
+        <li><button type="button" class="bikes__type bikes__type_active">Шоссе</button></li>
+        <li><button type="button" class="bikes__type">Грэвел</button></li>
+        <li><button type="button" class="bikes__type">ТТ</button></li>
+      </ul>
+      <ul class="bikes__bike-list bikes__bike-list_active">
+        <figure class="bikes__bike-container">
+          <img class="bike-image">
+          <figcaption>Cervelo Caledonia-5</figcaption>
+        </figure>
+        <figure class="bikes__bike-container">
+          <img class="bike-image">
+          <figcaption>Cannondale Systemsix Himod</figcaption>
+        </figure>
+        <figure class="bikes__bike-container">
+          <img class="bike-image">
+          <figcaption>Trek Domane SL-7</figcaption>
+        </figure>
+      </ul>
+      <ul class="bikes__bike-list">
+        <figure class="bikes__bike-container">
+          <img class="bike-image">
+          <figcaption>Cervelo Caledonia-5</figcaption>
+        </figure>
+        <figure class="bikes__bike-container">
+          <img class="bike-image">
+          <figcaption>Cannondale Systemsix Himod</figcaption>
+        </figure>
+        <figure class="bikes__bike-container">
+          <img class="bike-image">
+          <figcaption>Trek Domane SL-7</figcaption>
+        </figure>
+      </ul>
+      <ul class="bikes__bike-list">
+        <figure class="bikes__bike-container">
+          <img class="bike-image">
+          <figcaption>Cervelo Caledonia-5</figcaption>
+        </figure>
+        <figure class="bikes__bike-container">
+          <img class="bike-image">
+          <figcaption>Cannondale Systemsix Himod</figcaption>
+        </figure>
+        <figure class="bikes__bike-container">
+          <img class="bike-image">
+          <figcaption>Trek Domane SL-7</figcaption>
+        </figure>
+      </ul>
+    </div>
+  </section>
+  <section class="training section page__training" id="training">
+    <div class="section__about">
+      <h2 class="section__title training__title">Тренировки</h2>
+      <p class="section__description">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
+      <ul class="training__links">
+        <li><a class="training__link">Strava</a></li>
+        <li><a class="training__link">Komoot</a></li>
+      </ul>
+    </div>
+    <img class="training__image">
   </section>
 </body>
 </html>

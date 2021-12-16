@@ -627,4 +627,52 @@ template {
 }
 .button:hover::before {
   width: 100%;
+}
+
+.eddie {
+  display: grid;
+  padding: 120px 120px 60px;
+  grid-template-columns: 650px 470px;
+  justify-content: space-between;
+}
+.eddie__image {
+  width: 650px;
+  height: 460px;
+}
+.eddie__quote-container {
+  margin: 0;
+  padding: 0;
+}
+.eddie__quote {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.5px;
+  color: #151515;
+}
+.eddie__quote_theme_dark {
+  color: #fff;
+}
+.eddie__author {
+  display: block;
+  margin: 262px 0 0;
+  padding: 0;
+}
+.eddie__author-name {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.eddie__author-occupation {
+  margin: 6px 0 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  opacity: 0.7;
 }/*# sourceMappingURL=index.css.map */
