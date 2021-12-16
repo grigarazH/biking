@@ -1,0 +1,23 @@
+@mixin section-title($theme) {
+  margin: 60px 0 0;
+  font: {
+    family: $default-font;
+    size: 55px;
+    weight: bold;
+  }
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  color: map-get($map: $theme, $key: color-primary);
+}
+
+@mixin section-description($theme) {
+  margin: 50px 0 0;
+  font: {
+    family: $default-font;
+    size: 18px;
+    weight: normal;
+  }
+  line-height: 28px;
+  color: map-get($map: $theme, $key: color-secondary);
+  opacity: 0.7;
+}

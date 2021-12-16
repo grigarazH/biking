@@ -1,0 +1,8 @@
+.page {
+    background-color: map-get($map: $theme-light, $key: color-background);
+    scroll-padding-top: 74px;
+
+    &__lead {
+        margin: 94px 0 0;
+    }
+}

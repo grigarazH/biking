@@ -1,0 +1,57 @@
+.lead {
+  display: grid;
+  min-height: 837px;
+  grid-template-columns: 460px 810px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+}
+.lead__image-container {
+  position: relative;
+}
+.lead__image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 610px;
+  height: 836px;
+  white-space: nowrap;
+}
+.lead__bike-fix {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 421px;
+  margin-bottom: 79px;
+  width: 440px;
+  height: 300px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px 50px;
+  background-color: #f4f4f4;
+  filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
+}
+.lead__button {
+  margin: 49px 0 0;
+  min-width: 180px;
+}
+.lead__bike-title {
+  margin: 167px 0 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #151515;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.lead__bike-title::after {
+  width: 132px;
+  height: 2px;
+  background: #d7d4d4;
+  content: " ";
+}/*# sourceMappingURL=lead.css.map */

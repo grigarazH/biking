@@ -1,0 +1,18 @@
+$default-font: 'Inter', Arial, sans-serif;
+
+$theme-light: (
+  color-primary: #151515,
+  color-secondary: #222222,
+  color-background: #f4f4f4,
+  color-accent: #24b47e,
+  color-accent-secondary: #319e75,
+);
+
+$theme-dark: (
+  color-primary: #fff,
+  color-secondary: #504343,
+  color-background: #333,
+  color-accent: #24b47e,
+  color-accent-secondary: #319e75,
+);
+
