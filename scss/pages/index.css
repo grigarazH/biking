@@ -454,6 +454,7 @@ template {
 .page {
   background-color: #f4f4f4;
   scroll-padding-top: 74px;
+  overflow-x: hidden;
 }
 .page__lead {
   margin: 94px 0 0;
@@ -569,6 +570,7 @@ template {
   box-sizing: border-box;
   padding: 20px 50px;
   background-color: #f4f4f4;
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
   filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
 }
 .lead__button {
@@ -675,4 +677,98 @@ template {
   font-weight: 400;
   line-height: 28px;
   opacity: 0.7;
+}
+
+@-webkit-keyframes track-images-previous {
+  from {
+    transform: translateX(-690px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes track-images-previous {
+  from {
+    transform: translateX(-690px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes track-images-next {
+  from {
+    transform: translateX(-690px);
+  }
+  to {
+    transform: translateX(-1380px);
+  }
+}
+@keyframes track-images-next {
+  from {
+    transform: translateX(-690px);
+  }
+  to {
+    transform: translateX(-1380px);
+  }
+}
+.track__about {
+  display: none;
+}
+.track__about_active {
+  display: block;
+}
+.track__images {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  transform: translateX(-690px);
+}
+.track__image {
+  width: 650px;
+  height: 400px;
+}
+.track__image-container {
+  overflow: hidden;
+  margin: 80px 0 0;
+}
+.track__image-item {
+  position: relative;
+}
+.track__image-type-icon {
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  transition: opacity 0.2s linear 0.15s;
+}
+.track__image-type-icon_hidden {
+  opacity: 0;
+}
+.track__buttons {
+  margin: 50px 0 0;
+  display: flex;
+  gap: 20px;
+}
+.track__button {
+  width: 50px;
+  height: 50px;
+  background-size: 7 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #ebebeb;
+}
+.track__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.track__button_type_prev {
+  background-image: url(../../images/button-prev.svg);
+}
+.track__button_type_next {
+  background-image: url(../../images/button-next.svg);
 }/*# sourceMappingURL=index.css.map */

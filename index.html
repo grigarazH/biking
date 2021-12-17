@@ -10,13 +10,13 @@
   <header class="header">
     <nav>
       <ul class="header__links">
-        <li><a href="#" class="header__link">Покрытия и градиенты</a></li>
+        <li><a href="#track" class="header__link">Покрытия и градиенты</a></li>
         <li><a href="#" class="header__link">Велосипеды</a></li>
         <li><a href="#training" class="header__link">Тренировки</a></li>
       </ul>
     </nav>
   </header>
-  <section class="lead section page__lead">
+  <section class="section lead page__lead">
     <div class="section__about">
       <h1 class="section__title">Шоссе, TT и грэвел</h1>
       <p class="section__description">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
@@ -42,27 +42,33 @@
       </figcaption>
     </figure>
   </section>
-  <section class="track section">
+  <section class="section track" id="track">
     <div class="section__about track__about track__about_type_highway track__about_active">
       <h2 class="section__title">Шоссе</h2>
       <p class="section__description">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
     </div>
-    <div class="section__about track__about track__about_type_tt">
-      <h2 class="section__title">Шоссе</h2>
-      <p class="section__description">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
-    </div>
     <div class="section__about track__about track__about_type_gravel">
-      <h2 class="section__title">Шоссе</h2>
-      <p class="section__description">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+      <h2 class="section__title">Грэвел</h2>
+      <p class="section__description">Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.</p>
     </div>
-    <ul class="track__images">
-      <li class="track__image-container"><img class="track__image track__image_type_prev"></li>
-      <li class="track__image-container"><img class="track__image track__image_type_current"></li>
-      <li class="track__image-container"><img class="track__image track__image_type_next"></li>
-      <li class="track__image-container"><img class="track__image track__image_type_prev"></li>
-    </ul>
+    <div class="section__about track__about track__about_type_tt">
+      <h2 class="section__title">ТТ</h2>
+      <p class="section__description">ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.</p>
+    </div>
+    <div class="track__image-container">
+      <ul class="track__images">
+        <li class="track__image-item"><img class="track__image track__image_type_prev" src="./images/tt.png"></li>
+        <li class="track__image-item"><img class="track__image track__image_type_current" src="./images/highway.png"><img class="track__image-type-icon" src="./images/track-type-icon-highway.svg"></li>
+        <li class="track__image-item"><img class="track__image track__image_type_next" src="./images/gravel.png"></li>
+        <li class="track__image-item"><img class="track__image track__image_type_prev" src="./images/tt.png"></li>
+      </ul>
+    </div>
+    <div class="track__buttons">
+      <button class="track__button track__button_type_prev" type="button"></button>
+      <button class="track__button track__button_type_next" type="button"></button>
+    </div>
   </section>
-  <section class="bikes section">
+  <section class="bikes section" id="bikes">
     <div class="bikes__heading">
       <h2 class="section__title"></h2>
       <ul class="bikes__types">
@@ -70,49 +76,49 @@
         <li><button type="button" class="bikes__type">Грэвел</button></li>
         <li><button type="button" class="bikes__type">ТТ</button></li>
       </ul>
-      <ul class="bikes__bike-list bikes__bike-list_active">
-        <figure class="bikes__bike-container">
-          <img class="bike-image">
-          <figcaption>Cervelo Caledonia-5</figcaption>
-        </figure>
-        <figure class="bikes__bike-container">
-          <img class="bike-image">
-          <figcaption>Cannondale Systemsix Himod</figcaption>
-        </figure>
-        <figure class="bikes__bike-container">
-          <img class="bike-image">
-          <figcaption>Trek Domane SL-7</figcaption>
-        </figure>
-      </ul>
-      <ul class="bikes__bike-list">
-        <figure class="bikes__bike-container">
-          <img class="bike-image">
-          <figcaption>Cervelo Caledonia-5</figcaption>
-        </figure>
-        <figure class="bikes__bike-container">
-          <img class="bike-image">
-          <figcaption>Cannondale Systemsix Himod</figcaption>
-        </figure>
-        <figure class="bikes__bike-container">
-          <img class="bike-image">
-          <figcaption>Trek Domane SL-7</figcaption>
-        </figure>
-      </ul>
-      <ul class="bikes__bike-list">
-        <figure class="bikes__bike-container">
-          <img class="bike-image">
-          <figcaption>Cervelo Caledonia-5</figcaption>
-        </figure>
-        <figure class="bikes__bike-container">
-          <img class="bike-image">
-          <figcaption>Cannondale Systemsix Himod</figcaption>
-        </figure>
-        <figure class="bikes__bike-container">
-          <img class="bike-image">
-          <figcaption>Trek Domane SL-7</figcaption>
-        </figure>
-      </ul>
     </div>
+    <ul class="bikes__bike-list bikes__bike-list_active">
+      <figure class="bikes__bike-container">
+        <img class="bike-image">
+        <figcaption>Cervelo Caledonia-5</figcaption>
+      </figure>
+      <figure class="bikes__bike-container">
+        <img class="bike-image">
+        <figcaption>Cannondale Systemsix Himod</figcaption>
+      </figure>
+      <figure class="bikes__bike-container">
+        <img class="bike-image">
+        <figcaption>Trek Domane SL-7</figcaption>
+      </figure>
+    </ul>
+    <ul class="bikes__bike-list">
+      <figure class="bikes__bike-container">
+        <img class="bike-image">
+        <figcaption>Cervelo Caledonia-5</figcaption>
+      </figure>
+      <figure class="bikes__bike-container">
+        <img class="bike-image">
+        <figcaption>Cannondale Systemsix Himod</figcaption>
+      </figure>
+      <figure class="bikes__bike-container">
+        <img class="bike-image">
+        <figcaption>Trek Domane SL-7</figcaption>
+      </figure>
+    </ul>
+    <ul class="bikes__bike-list">
+      <figure class="bikes__bike-container">
+        <img class="bike-image">
+        <figcaption>Cervelo Caledonia-5</figcaption>
+      </figure>
+      <figure class="bikes__bike-container">
+        <img class="bike-image">
+        <figcaption>Cannondale Systemsix Himod</figcaption>
+      </figure>
+      <figure class="bikes__bike-container">
+        <img class="bike-image">
+        <figcaption>Trek Domane SL-7</figcaption>
+      </figure>
+    </ul>
   </section>
   <section class="training section page__training" id="training">
     <div class="section__about">
@@ -126,4 +132,5 @@
     <img class="training__image">
   </section>
 </body>
+<script src="./scripts/index.js"></script>
 </html>

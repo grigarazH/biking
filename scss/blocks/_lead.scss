@@ -34,6 +34,7 @@
         box-sizing: border-box;
         padding: 20px 50px;
         background-color: map-get($map: $theme-light, $key: color-background);
+        box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
         filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, .2));
     }
 
