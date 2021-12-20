@@ -70,7 +70,7 @@
   </section>
   <section class="bikes section" id="bikes">
     <div class="bikes__heading">
-      <h2 class="section__title"></h2>
+      <h2 class="section__title bikes__title">Велосипеды</h2>
       <ul class="bikes__types">
         <li><button type="button" class="bikes__type bikes__type_active">Шоссе</button></li>
         <li><button type="button" class="bikes__type">Грэвел</button></li>
@@ -79,16 +79,16 @@
     </div>
     <ul class="bikes__bike-list bikes__bike-list_active">
       <figure class="bikes__bike-container">
-        <img class="bike-image">
-        <figcaption>Cervelo Caledonia-5</figcaption>
+        <img class="bikes__bike-image" src="./images/bikes/highway/cervelo.png">
+        <figcaption class="bikes__bike-heading">Cervelo Caledonia-5</figcaption>
       </figure>
       <figure class="bikes__bike-container">
-        <img class="bike-image">
-        <figcaption>Cannondale Systemsix Himod</figcaption>
+        <img class="bikes__bike-image" src="./images/bikes/highway/cannondale.png">
+        <figcaption class="bikes__bike-heading">Cannondale Systemsix Himod</figcaption>
       </figure>
       <figure class="bikes__bike-container">
-        <img class="bike-image">
-        <figcaption>Trek Domane SL-7</figcaption>
+        <img class="bikes__bike-image" src="./images/bikes/highway/trek.png">
+        <figcaption class="bikes__bike-heading">Trek Domane SL-7</figcaption>
       </figure>
     </ul>
     <ul class="bikes__bike-list">
@@ -125,12 +125,29 @@
       <h2 class="section__title training__title">Тренировки</h2>
       <p class="section__description">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
       <ul class="training__links">
-        <li><a class="training__link">Strava</a></li>
-        <li><a class="training__link">Komoot</a></li>
+        <li><a href="#" class="training__link">Strava</a></li>
+        <li><a href="#" class="training__link">Komoot</a></li>
       </ul>
     </div>
-    <img class="training__image">
+    <img class="training__image" src="./images/training-image.png">
   </section>
+  <footer class="footer">
+    <h2 class="footer__title">Подпишитесь на рассылку —</h2>
+    <form class="footer__form">
+      <input class="footer__input" type="email" placeholder="Ваш email">
+      <button class="footer__submit" type="submit">ok</button>
+    </form>
+    <div class="footer__about">
+      <p class="footer__copyright">&copy; Road Club 2021</p>
+      <div class="switcher">
+        <img class="switcher__icon switcher__icon_type_light" src="./images/switcher-icon-light.svg">
+        <div class="switcher__wrapper">
+          <button class="switcher__button"></button>
+        </div>
+        <img class="switcher__icon switcher__icon_type_dark" src="./images/switcher-icon-dark.svg">
+      </div>
+    </div>
+  </footer>
 </body>
 <script src="./scripts/index.js"></script>
 </html>

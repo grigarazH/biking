@@ -1,0 +1,3 @@
+@function hex-to-rgba($color) {
+    @return red($color)+", " + green($color) + ", "+blue($color);
+}

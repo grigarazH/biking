@@ -1,0 +1,89 @@
+@import "../utilities/functions";
+
+.footer {
+    background-color: map-get($map: $theme-light, $key: color-footer-background);
+    padding: 80px 120px 60px;
+
+    &__title {
+        max-width: 229px;
+        font: {
+            family: $default-font;
+            size: 24px;
+            weight: 600;
+        }
+        line-height: 32px;
+        color: map-get($map: $theme-light, $key: color-primary);
+    }
+
+    &__form {
+        position: relative;
+        max-width: 360px;
+    }
+
+    &__input {
+        border: 1px solid rgba(map-get($map: $theme-light, $key: color-border), .5);
+        border-radius: 4px;
+        background-color: transparent;
+        padding: 11px 20px;
+        width: 100%;
+        font: {
+            family: $default-font;
+            weight: 500;
+            size: 13px;
+        }
+        line-height: 28px;
+        color: map-get($map: $theme-light, $key: color-primary);
+
+        &::placeholder {
+            color: hex-to-rgba(map-get($map: $theme-light, $key: color-secondary));
+        }
+
+        &:hover {
+            cursor: pointer;
+
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid map-get($map: $theme-light, $key: color-border);
+        }
+
+        &:focus + .footer__submit {
+            display: block;
+            position: absolute;
+            right: 22px;
+            top: 11px;
+            border: none;
+            font: {
+                family: $default-font;
+                weight: 500;
+                size: 13px;
+            }
+            line-height: 28px;
+            color: map-get($map: $theme-light, $key: color-primary);
+        }
+    }
+
+    &__submit {
+        display: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__about {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        font: {
+            family: $default-font;
+            size: 14px;
+            weight: 600;
+        }
+        line-height: 20px;
+        color: map-get($map: $theme-light, $key: color-footer);
+    }
+}

@@ -712,6 +712,9 @@ template {
     transform: translateX(-1380px);
   }
 }
+.track {
+  padding: 0 0 60px 120px;
+}
 .track__about {
   display: none;
 }
@@ -771,4 +774,211 @@ template {
 }
 .track__button_type_next {
   background-image: url(../../images/button-next.svg);
+}
+
+.bikes {
+  padding: 0 120px 60px;
+}
+.bikes__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 60px 0 0;
+}
+.bikes__title {
+  margin: 0;
+}
+.bikes__types {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+.bikes__type {
+  border: none;
+  background-color: transparent;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  opacity: 0.7;
+}
+.bikes__type_active {
+  opacity: 1;
+}
+.bikes__bike-list {
+  display: none;
+  margin: 120px 0 0;
+}
+.bikes__bike-list_active {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.bikes__bike-container {
+  margin: 0;
+  padding: 0;
+}
+.bikes__bike-image {
+  box-sizing: border-box;
+  width: 380px;
+  height: 380px;
+  padding: 20px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 20px;
+  background: #f4f4f4;
+  filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+}
+.bikes__bike-heading {
+  margin: 22px 0 0 6px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #151515;
+}
+
+.training {
+  display: grid;
+  grid-template-columns: 460px 580px;
+  justify-content: space-between;
+  padding: 150px 120px 120px;
+}
+.training__title {
+  margin: 0;
+}
+.training__links {
+  display: flex;
+  margin: 182px 0 0;
+  padding: 0;
+  gap: 30px;
+  list-style-type: none;
+}
+.training__link {
+  text-decoration: none;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #151515;
+}
+.training__image {
+  width: 580px;
+  height: 460px;
+}
+
+.footer {
+  background-color: #efefef;
+  padding: 80px 120px 60px;
+}
+.footer__title {
+  max-width: 229px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: #151515;
+}
+.footer__form {
+  position: relative;
+  max-width: 360px;
+}
+.footer__input {
+  border: 1px solid rgba(199, 199, 199, 0.5);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 11px 20px;
+  width: 100%;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: #151515;
+}
+.footer__input::-moz-placeholder {
+  color: "34, 34, 34";
+}
+.footer__input:-ms-input-placeholder {
+  color: "34, 34, 34";
+}
+.footer__input::placeholder {
+  color: "34, 34, 34";
+}
+.footer__input:hover {
+  cursor: pointer;
+}
+.footer__input:focus {
+  outline: none;
+  border: 1px solid #c7c7c7;
+}
+.footer__input:focus + .footer__submit {
+  display: block;
+  position: absolute;
+  right: 22px;
+  top: 11px;
+  border: none;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: #151515;
+}
+.footer__submit {
+  display: none;
+}
+.footer__submit:hover {
+  cursor: pointer;
+}
+.footer__about {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__copyright {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #cfcfcf;
+}
+
+.switcher {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+.switcher__wrapper {
+  width: 44px;
+  height: 24px;
+  border-radius: 9999px;
+  background-color: #fff;
+  padding: 2px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+}
+.switcher__button {
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-color: #24b47e;
+  border-radius: 50%;
+  transition: transform 0.4s linear 0.2s;
+}
+.switcher__button_theme_dark {
+  transform: translateX(20px);
+}
+.switcher__icon_type_light {
+  width: 28px;
+  height: 28px;
+}
+.switcher__icon_type_dark {
+  width: 19.35px;
+  height: 19.35px;
+}
+.switcher__icon_theme_dark {
+  filter: brightness(0%) saturate(100%) invert(43%) sepia(0%) saturate(1747%) hue-rotate(167deg) brightness(91%) contrast(86%);
 }/*# sourceMappingURL=index.css.map */

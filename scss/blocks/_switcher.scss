@@ -1,0 +1,45 @@
+.switcher {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+
+    &__wrapper {
+        width: 44px;
+        height: 24px;
+        border-radius: 9999px;
+        background-color: #fff;
+        padding: 2px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__button {
+        border: none;
+        width: 20px;
+        height: 20px;
+        background-color: map-get($map: $theme-light, $key: color-accent);
+        border-radius: 50%;
+        transition: transform .4s linear .2s;
+
+        &_theme_dark {
+            transform: translateX(20px);
+        }
+    }
+
+    &__icon {
+        &_type_light {
+            width: 28px;
+            height: 28px;
+        }
+
+        &_type_dark {
+            width: 19.35px;
+            height: 19.35px;
+        }
+    
+        &_theme_dark {
+            filter: brightness(0%) saturate(100%) invert(43%) sepia(0%) saturate(1747%) hue-rotate(167deg) brightness(91%) contrast(86%);
+        }
+    }
+}

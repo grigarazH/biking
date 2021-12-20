@@ -1,0 +1,77 @@
+.bikes {
+    padding: 0 120px 60px;
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin: 60px 0 0;
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__types {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        gap: 40px;
+    }
+
+    &__type {
+        border: none;
+        background-color: transparent;
+        font: {
+            family: $default-font;
+            size: 18px;
+            weight: 600;
+        }
+        line-height: 28px;
+        opacity: .7;
+
+        &_active {
+            opacity: 1;
+        }
+    }
+
+    &__bike-list {
+        display: none;
+        margin: 120px 0 0;
+
+        &_active {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+    }
+
+    &__bike-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__bike-image {
+        box-sizing: border-box;
+        width: 380px;
+        height: 380px;
+        padding: 20px;
+        object-position: center;
+        object-fit: contain;
+        border-radius: 20px;
+        background: map-get($theme-light, color-background);
+        filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+    }
+
+    &__bike-heading {
+        margin: 22px 0 0 6px;
+        font: {
+            family: $default-font;
+            size: 18px;
+            weight: 600;
+        }
+        line-height: 22px;
+        color: map-get($map: $theme-light, $key: color-primary);
+    }
+}
