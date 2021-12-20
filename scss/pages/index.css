@@ -494,7 +494,6 @@ template {
   padding-left: 120px;
 }
 .section__title {
-  margin: 60px 0 0;
   font-family: "Inter", Arial, sans-serif;
   font-size: 55px;
   font-weight: bold;
@@ -503,7 +502,6 @@ template {
   color: #151515;
 }
 .section__title_theme_dark {
-  margin: 60px 0 0;
   font-family: "Inter", Arial, sans-serif;
   font-size: 55px;
   font-weight: bold;
@@ -515,7 +513,6 @@ template {
   max-width: 460px;
 }
 .section__description {
-  margin: 50px 0 0;
   font-family: "Inter", Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
@@ -524,7 +521,6 @@ template {
   opacity: 0.7;
 }
 .section__description_theme_dark {
-  margin: 50px 0 0;
   font-family: "Inter", Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
@@ -540,12 +536,26 @@ template {
   display: grid;
   min-height: 837px;
   grid-template-columns: 460px 810px;
+  grid-template-rows: repeat(3, -webkit-min-content) auto;
+  grid-template-rows: repeat(3, min-content) auto;
   justify-content: space-between;
+  align-items: start;
   box-sizing: border-box;
   width: 100%;
+  grid-template-areas: "title image" "description image" "button image" "bike-title image";
+}
+.lead__title {
+  margin: 50px 0 0;
+  grid-area: title;
 }
 .lead__image-container {
   position: relative;
+  grid-area: image;
+  align-self: stretch;
+}
+.lead__description {
+  margin: 80px 0 0;
+  grid-area: description;
 }
 .lead__image {
   position: absolute;
@@ -576,6 +586,8 @@ template {
 .lead__button {
   margin: 49px 0 0;
   min-width: 180px;
+  grid-area: button;
+  justify-self: start;
 }
 .lead__bike-title {
   margin: 167px 0 0;
@@ -587,6 +599,7 @@ template {
   display: flex;
   gap: 30px;
   align-items: center;
+  grid-area: bike-title;
 }
 .lead__bike-title::after {
   width: 132px;

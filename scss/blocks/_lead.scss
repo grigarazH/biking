@@ -4,12 +4,30 @@
     display: grid;
     min-height: 837px;
     grid-template-columns: 460px 810px;
+    grid-template-rows: repeat(3, min-content) auto;
     justify-content: space-between;
+    align-items: start;
     box-sizing: border-box;
     width: 100%;
+    grid-template-areas: "title image"
+                         "description image"
+                         "button image"
+                         "bike-title image";
+
+    &__title {
+        margin: 50px 0 0;
+        grid-area: title;
+    }
 
     &__image-container {
         position: relative;
+        grid-area: image;
+        align-self: stretch;
+    }
+
+    &__description {
+        margin: 80px 0 0;
+        grid-area: description;
     }
 
     
@@ -41,6 +59,8 @@
     &__button {
         margin: 49px 0 0;
         min-width: 180px;
+        grid-area: button;
+        justify-self: start;
     }
 
     &__bike-title {
@@ -62,5 +82,7 @@
             background: #d7d4d4;
             content: ' ';
         }
+        
+        grid-area: bike-title;
     }
 }
