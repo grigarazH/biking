@@ -8,5 +8,9 @@
         margin: 94px 0 0;
     }
 
-    overflow-x: hidden;
+    @media screen and (max-width: 1079px) {
+        &__lead {
+            margin: 74px 0 0;
+        }
+    }
 }

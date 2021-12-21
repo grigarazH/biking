@@ -85,4 +85,84 @@
         
         grid-area: bike-title;
     }
+
+    @media screen and (max-width: 1287px) {
+        grid-template-columns: 460px 602px;
+
+        &__image-container {
+            min-height: 680px;
+        }
+
+        &__image {
+            width: 496px;
+            height: 680px;
+        }
+
+        &__bike-fix {
+            top: 265px + 94px;
+            margin-bottom: 64px;
+        }
+
+        &__bike-title {
+            margin: 72px 0 0;
+        }
+    }
+
+    @media screen and (max-width: 1079px) {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, min-content);
+        grid-template-areas: "title" 
+                            "image" 
+                            "description"
+                            "button";
+        width: 100%;
+        padding: 40px 18px;
+        justify-items: stretch;
+        gap: 40px;
+
+        &__title {
+            margin: 0;
+        }
+
+        &__description {
+            margin: 0;
+        }
+
+        &__button {
+            margin: 0;
+            justify-self: stretch;
+        }
+
+        &__bike-fix {
+            top: 265px + 74px + 60px + 40px;
+        }
+
+        &__bike-title {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 574px) {
+        &__image-container {
+            min-height: 348px;
+        }
+
+        &__image {
+            width: 254px;
+            height: 348px;
+        }
+
+        &__bike-fix {
+            width: 234px;
+            height: 160px;
+            top: 136px + 74px + 40px + 40px;
+            margin-bottom: 37px;
+        }
+    }
+
+    @media screen and (max-width: 340px) {
+        &__bike-fix {
+            top: 136px + 74px + 80px + 40px;
+        }
+    }
 }

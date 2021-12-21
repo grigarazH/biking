@@ -13,6 +13,11 @@
         }
     }
 
+    &__anchor {
+        position: relative;
+        bottom: 74px;
+    }
+
     &__about {
         max-width: 460px;
     }
@@ -27,5 +32,29 @@
 
     &_theme_dark {
         background-color: map-get($map: $theme-dark, $key: color-background);
+    }
+
+    @media screen and (max-width: 1389px) {
+        & {
+            padding-left: 18px;
+        }
+    }
+
+    @media screen and (max-width: 574px) {
+        &__title {
+            @include section-title($theme-light, false);
+
+            &_theme_dark {
+                @include section-title($theme-dark, false);
+            }
+        }
+
+        &__description {
+            @include section-description($theme-light, false);
+            
+            &_theme_dark {
+                @include section-description($theme-dark, false);
+            }
+        }
     }
 }

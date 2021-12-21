@@ -26,9 +26,12 @@
   &__text {
     margin: 0;
     font: {
+      size: 14px;
       family: $default-font;
       weight: 600;
     }
+    line-height: 18px;
+    letter-spacing: 1px;
     color: #fff;
     z-index: 2;
   }
@@ -39,5 +42,10 @@
     &::before {
       width: 100%;
     }
+  }
+
+  @media screen and (max-width: 540px) {
+    font-size: 13px;
+    line-height: 19px;
   }
 }
