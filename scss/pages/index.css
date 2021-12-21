@@ -814,6 +814,59 @@ template {
   line-height: 28px;
   opacity: 0.7;
 }
+@media screen and (max-width: 1080px) {
+  .eddie {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 40px 18px 40px;
+  }
+  .eddie::before {
+    display: block;
+    content: " ";
+    width: 100%;
+    border-top: 1px solid #e3e3e3;
+  }
+  .eddie__image {
+    margin: 20px 0 0;
+    align-self: center;
+  }
+  .eddie__quote-container {
+    margin: 40px 0 0;
+  }
+  .eddie__author {
+    margin: 40px 0 0;
+  }
+  .eddie__author-occupation {
+    margin: 4px 0 0;
+  }
+}
+@media screen and (max-width: 681px) {
+  .eddie__image {
+    width: 400px;
+    height: 280px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .eddie__quote {
+    font-size: 23px;
+    line-height: 29px;
+  }
+  .eddie__author-name {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .eddie__author-occupation {
+    font-size: 10px;
+    line-height: 16px;
+  }
+}
+@media screen and (max-width: 431px) {
+  .eddie__image {
+    width: 284px;
+    height: 204px;
+  }
+}
 
 @-webkit-keyframes track-images-previous {
   from {

@@ -59,5 +59,67 @@
             opacity: .7;
         }
     }
+
+    @media screen and (max-width: 1080px) {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 40px 18px 40px;
+
+        &::before {
+            display: block;
+            content: " ";
+            width: 100%;
+            border-top: 1px solid map-get($map: $theme-light, $key: color-border);
+        }
+
+        &__image {
+            margin: 20px 0 0;
+            align-self: center;
+        }
+
+        &__quote-container {
+            margin: 40px 0 0;
+        }
+
+        &__author {
+            margin: 40px 0 0;
+        }
+
+        &__author-occupation {
+            margin: 4px 0 0;
+        }
+    }
+
+    @media screen and (max-width: 681px) {
+        &__image {
+            width: 400px;
+            height: 280px;
+        }
+    }
+
+    @media screen and (max-width: 540px) {
+        &__quote {
+            font-size: 23px;
+            line-height: 29px;
+        }
+
+        &__author-name {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &__author-occupation {
+            font-size: 10px;
+            line-height: 16px;
+        }
+    }
+
+    @media screen and (max-width: 431px) {
+        &__image {
+            width: 284px;
+            height: 204px;
+        }
+    }
 }
 
