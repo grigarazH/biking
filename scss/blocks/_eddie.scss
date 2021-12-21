@@ -67,10 +67,7 @@
         padding: 40px 18px 40px;
 
         &::before {
-            display: block;
-            content: " ";
-            width: 100%;
-            border-top: 1px solid map-get($map: $theme-light, $key: color-border);
+            @include section-separator;
         }
 
         &__image {

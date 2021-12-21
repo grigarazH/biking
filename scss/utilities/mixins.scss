@@ -32,3 +32,11 @@
   color: map-get($map: $theme, $key: color-secondary);
   opacity: 0.7;
 }
+
+
+@mixin section-separator() {
+  display: block;
+  content: " ";
+  width: 100%;
+  border-top: 1px solid map-get($map: $theme-light, $key: color-border);
+}

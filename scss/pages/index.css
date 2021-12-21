@@ -1067,6 +1067,55 @@ template {
   height: 460px;
   grid-area: image;
 }
+@media screen and (max-width: 1389px) {
+  .training {
+    padding: 150px 18px 120px;
+  }
+}
+@media screen and (max-width: 1079px) {
+  .training {
+    padding: 80px 18px 60px;
+    display: flex;
+    flex-direction: column;
+  }
+  .training::before {
+    display: block;
+    content: " ";
+    width: 100%;
+    border-top: 1px solid #e3e3e3;
+  }
+  .training__title {
+    margin: 40px 0 0;
+  }
+  .training__description {
+    margin: 40px 0 0;
+  }
+  .training__links {
+    margin: 40px 0 0;
+  }
+  .training__image {
+    margin: 40px 0 0;
+    align-self: center;
+  }
+}
+@media screen and (max-width: 611px) {
+  .training__image {
+    width: 375px;
+    height: 297px;
+  }
+}
+@media screen and (max-width: 574px) {
+  .training__link {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 407px) {
+  .training__image {
+    width: 284px;
+    height: 225px;
+  }
+}
 
 .footer {
   background-color: #efefef;
