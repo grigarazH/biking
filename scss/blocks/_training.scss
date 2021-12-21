@@ -1,11 +1,21 @@
 .training {
     display: grid;
     grid-template-columns: 460px 580px;
+    grid-template-areas: ". ."
+                         "title image"
+                        "description image"
+                        "links image";
     justify-content: space-between;
     padding: 150px 120px 120px;
 
     &__title {
         margin: 0;
+        grid-area: title;
+    }
+
+    &__description {
+        margin: 50px 0 0;
+        grid-area: description;
     }
 
     &__links {
@@ -14,6 +24,7 @@
         padding: 0;
         gap: 30px;
         list-style-type: none;
+        grid-area: links;
     }
 
     &__link {
@@ -30,5 +41,6 @@
     &__image {
         width: 580px;
         height: 460px;
+        grid-area: image;
     }
 }

@@ -1034,11 +1034,17 @@ template {
 .training {
   display: grid;
   grid-template-columns: 460px 580px;
+  grid-template-areas: ". ." "title image" "description image" "links image";
   justify-content: space-between;
   padding: 150px 120px 120px;
 }
 .training__title {
   margin: 0;
+  grid-area: title;
+}
+.training__description {
+  margin: 50px 0 0;
+  grid-area: description;
 }
 .training__links {
   display: flex;
@@ -1046,6 +1052,7 @@ template {
   padding: 0;
   gap: 30px;
   list-style-type: none;
+  grid-area: links;
 }
 .training__link {
   text-decoration: none;
@@ -1058,6 +1065,7 @@ template {
 .training__image {
   width: 580px;
   height: 460px;
+  grid-area: image;
 }
 
 .footer {
