@@ -40,3 +40,12 @@
   width: 100%;
   border-top: 1px solid map-get($map: $theme-light, $key: color-border);
 }
+
+@mixin link() {
+  font: {
+    family: $default-font;
+    weight: 500;
+  }
+
+  text-decoration: none;
+}

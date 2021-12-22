@@ -22,13 +22,35 @@
     }
 
     &__link {
-        text-decoration: none;
-        font: {
-            family: $default-font;
-            size: 14px;
-            weight: 500;
-        }
+        @include link();
+        font-size: 14px;
         line-height: 18px;
         color: map-get($map: $theme-light, $key: color-primary);
+    }
+
+    &__menu-toggle {
+        display: none;
+    }
+
+    @media screen and (max-width: 574px) {
+        padding-right: 18px;
+
+        &__links {
+            display: none;
+        }
+
+        &__menu-toggle {
+            display: block;
+            border: none;
+            width: 22px;
+            height: 19px;
+            background-image: url(../../images/menu.svg);
+        }
+
+        &__menu-toggle_active {
+            width: 32px;
+            height: 33px;
+            background-image: url(../../images/close.svg);
+        }
     }
 }
