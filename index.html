@@ -58,18 +58,12 @@
   </section>
   <section class="section track">
     <a class="section__anchor" id="track"></a>
-    <div class="section__about track__about track__about_type_highway track__about_active">
-      <h2 class="section__title">Шоссе</h2>
-      <p class="section__description">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
-    </div>
-    <div class="section__about track__about track__about_type_gravel">
-      <h2 class="section__title">Грэвел</h2>
-      <p class="section__description">Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.</p>
-    </div>
-    <div class="section__about track__about track__about_type_tt">
-      <h2 class="section__title">ТТ</h2>
-      <p class="section__description">ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.</p>
-    </div>
+    <h2 class="section__title track__title track__title_type_highway track__title_active">Шоссе</h2>
+    <p class="section__description track__description track__description_type_highway track__description_active">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+    <h2 class="section__title track__title track__title_type_gravel">Грэвел</h2>
+    <p class="section__description track__description track__description_type_gravel">Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.</p>
+    <h2 class="section__title track__title track__title_type_tt">ТТ</h2>
+    <p class="section__description track__description track__description_type_tt">ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.</p>
     <div class="track__image-container">
       <ul class="track__images">
         <li class="track__image-item"><img class="track__image track__image_type_prev" src="./images/tt.png"></li>
@@ -88,12 +82,17 @@
     <div class="bikes__heading">
       <h2 class="section__title bikes__title">Велосипеды</h2>
       <ul class="bikes__types">
-        <li><button type="button" class="bikes__type bikes__type_active">Шоссе</button></li>
-        <li><button type="button" class="bikes__type">Грэвел</button></li>
-        <li><button type="button" class="bikes__type">ТТ</button></li>
+        <li><button type="button" class="bikes__type bikes__type_active" data-type="highway">Шоссе</button></li>
+        <li><button type="button" class="bikes__type" data-type="gravel">Грэвел</button></li>
+        <li><button type="button" class="bikes__type" data-type="tt">ТТ</button></li>
       </ul>
     </div>
-    <ul class="bikes__bike-list bikes__bike-list_active">
+    <select class="bikes__type-select">
+      <option value="highway">Шоссе</option>
+      <option value="gravel">Грэвел</option>
+      <option value="tt">ТТ</option>
+    </select>
+    <ul class="bikes__bike-list bikes__bike-list_active" data-track="highway">
       <figure class="bikes__bike-container">
         <img class="bikes__bike-image" src="./images/bikes/highway/cervelo.png">
         <figcaption class="bikes__bike-heading">Cervelo Caledonia-5</figcaption>
@@ -107,7 +106,21 @@
         <figcaption class="bikes__bike-heading">Trek Domane SL-7</figcaption>
       </figure>
     </ul>
-    <ul class="bikes__bike-list">
+    <ul class="bikes__bike-list" data-track="gravel">
+      <figure class="bikes__bike-container">
+        <img class="bike-image">
+        <figcaption>Cervelo Caledonia-5</figcaption>
+      </figure>
+      <figure class="bikes__bike-container">
+        <img class="bikes-image">
+        <figcaption>Cannondale Systemsix Himod</figcaption>
+      </figure>
+      <figure class="bikes__bike-container">
+        <img class="bike-image">
+        <figcaption>Trek Domane SL-7</figcaption>
+      </figure>
+    </ul>
+    <ul class="bikes__bike-list" data-track="tt">
       <figure class="bikes__bike-container">
         <img class="bike-image">
         <figcaption>Cervelo Caledonia-5</figcaption>
@@ -121,19 +134,10 @@
         <figcaption>Trek Domane SL-7</figcaption>
       </figure>
     </ul>
-    <ul class="bikes__bike-list">
-      <figure class="bikes__bike-container">
-        <img class="bike-image">
-        <figcaption>Cervelo Caledonia-5</figcaption>
-      </figure>
-      <figure class="bikes__bike-container">
-        <img class="bike-image">
-        <figcaption>Cannondale Systemsix Himod</figcaption>
-      </figure>
-      <figure class="bikes__bike-container">
-        <img class="bike-image">
-        <figcaption>Trek Domane SL-7</figcaption>
-      </figure>
+    <ul class="paginator bikes__paginator">
+      <button type="button" class="paginator__item"></button>
+      <button type="button" class="paginator__item"></button>
+      <button type="button" class="paginator__item"></button>
     </ul>
   </section>
   <section class="training section page__training">
@@ -154,7 +158,7 @@
     </form>
     <div class="footer__about">
       <p class="footer__copyright">&copy; Road Club 2021</p>
-      <div class="switcher">
+      <div class="switcher footer__switcher">
         <img class="switcher__icon switcher__icon_type_light" src="./images/switcher-icon-light.svg">
         <div class="switcher__wrapper">
           <button class="switcher__button"></button>

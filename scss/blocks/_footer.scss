@@ -75,9 +75,12 @@
     &__about {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        vertical-align: center;
     }
 
     &__copyright {
+        margin: 0;
         font: {
             family: $default-font;
             size: 14px;
@@ -85,5 +88,29 @@
         }
         line-height: 20px;
         color: map-get($map: $theme-light, $key: color-footer);
+    }
+
+    @media screen and (max-width: 574px) {
+        padding: 60px 18px 16px;
+
+        &__title {
+            max-width: none;
+        }
+
+        &__form {
+            max-width: none;
+        }
+
+        &__about::after {
+            content: " ";
+            display: flex;
+            width: 38px;
+            height: 38px;
+            background-image: url(../../images/logo.svg);
+        }
+
+        &__switcher {
+            display: none;
+        }
     }
 }

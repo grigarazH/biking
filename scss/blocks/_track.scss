@@ -1,3 +1,5 @@
+
+
 @keyframes track-images-previous {
     from {
         transform: translateX(-690px);
@@ -17,13 +19,26 @@
 }
 
 .track {
-    padding: 0 0 60px 120px;
-    &__about {
+    padding: 60px 0 60px 120px;
+
+    &__title {
+        margin: 0;
         display: none;
-        
+        grid-area: title;
+
         &_active {
             display: block;
         }
+    }
+
+    &__description {
+        display: none;
+        grid-area: description;
+
+        &_active {
+            display: block;
+        }
+        margin: 50px 0 0;
     }
     
     &__images {
@@ -36,28 +51,30 @@
         transform: translateX(-690px);
     }
 
+    
+    &__image-container {
+        overflow: hidden;
+        margin: 80px 0 0;
+        grid-area: image-container;
+    }
+
+    &__image-item {
+        position: relative;
+    }
+
     &__image {
         width: 650px;
         height: 400px;
+    }
 
-        &-container {
-            overflow: hidden;
-            margin: 80px 0 0;
-        }
+    &__image-type-icon {
+        position: absolute;
+        left: 0;
+        bottom: 16px;
+        transition: opacity .2s linear .15s;
 
-        &-item {
-            position: relative;
-        }
-
-        &-type-icon {
-            position: absolute;
-            left: 0;
-            bottom: 16px;
-            transition: opacity .2s linear .15s;
-
-            &_hidden {
-                opacity: 0;
-            }
+        &_hidden {
+            opacity: 0;
         }
     }
 
@@ -65,12 +82,13 @@
         margin: 50px 0 0;
         display: flex;
         gap: 20px;
+        grid-area: buttons;
     }
 
     &__button {
         width: 50px;
         height: 50px;
-        background-size: 7 16px;
+        background-size: 7px 16px;
         background-repeat: no-repeat;
         background-position: center;
         border: none;
@@ -88,6 +106,85 @@
 
         &_type_next {
             background-image: url(../../images/button-next.svg);
+        }
+    }
+
+    @media screen and (max-width: 1080px) {
+        padding-left: 18px;
+    }
+}
+
+@media screen and (max-width: 574px) {
+
+    @keyframes track-images-previous {
+        from {
+            transform: translateX(-304px);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes track-images-next {
+        from {
+            transform: translateX(-304px);
+        }
+        to {
+            transform: translateX(-304px - 304px);
+        }
+    }
+
+    .track {
+        padding: 0 18px;
+        display: grid;
+        row-gap: 40px;
+        justify-content: space-between;
+        grid-auto-rows: min-content;
+        grid-template-areas: ". ."
+                             "separator separator"
+                             "title buttons"
+                             "image-container image-container"
+                             "description description";
+        align-items: center;
+
+        &::before {
+            @include section-separator();
+            grid-area: separator;
+        }
+
+        &__description {
+            margin: 0;
+        }
+
+        &__buttons {
+            margin: 0;
+            justify-self: end;
+            gap: 20px;
+        }
+
+        &__button {
+            width: 24px;
+            height: 24px;
+            background-size: 4.5px 10px;
+        }
+
+        &__image-container {
+            margin: 0;
+        }
+
+        &__image {
+            width: 284px;
+            height: 175px;
+        }
+
+        &__images {
+            gap: 20px;
+            transform: translateX(-304px);
+        }
+        
+        &__image-type-icon {
+            width: 70px;
+            height: 28px;
         }
     }
 }

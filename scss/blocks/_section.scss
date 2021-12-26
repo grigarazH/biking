@@ -4,6 +4,7 @@
 .section {
     background-color: map-get($map: $theme-light, $key: color-background);
     padding-left: 120px;
+    position: relative;
 
     &__title {
         @include section-title($theme-light);
