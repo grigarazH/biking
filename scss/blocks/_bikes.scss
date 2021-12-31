@@ -121,7 +121,7 @@
         display: none;
     }
 
-    @media screen and (max-width: 1389px) {
+    @media screen and (max-width: $screen-medium) {
         padding: 0 18px 60px;
     }
 

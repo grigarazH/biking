@@ -117,7 +117,7 @@
         background: map-get($map: $theme-dark, $key: color-footer-background);
     }
 
-    @media screen and (max-width: 574px) {
+    @media screen and (max-width: $screen-mobile) {
         padding: 60px 18px 16px;
 
         &__title {

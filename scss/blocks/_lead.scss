@@ -150,7 +150,7 @@
         }
     }
 
-    @media screen and (max-width: 574px) {
+    @media screen and (max-width: $screen-mobile) {
         &__image-container {
             min-height: 348px;
         }

@@ -46,7 +46,7 @@
         background-color: map-get($map: $theme-dark, $key: color-background);
     }
 
-    @media screen and (max-width: 574px) {
+    @media screen and (max-width: $screen-mobile) {
         padding-right: 18px;
 
         &__links {

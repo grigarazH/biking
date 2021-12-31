@@ -26,7 +26,7 @@
         }
     }
 
-    @media screen and (max-width: 574px) {
+    @media screen and (max-width: $screen-mobile) {
 
         &__item {
             width: 4px;

@@ -12,7 +12,7 @@
         background-color: map-get($map: $theme-dark, $key: color-background);
     }
 
-    @media screen and (max-width: 1079px) {
+    @media screen and (max-width: $screen-tablet) {
         &__lead {
             margin: 74px 0 0;
         }
