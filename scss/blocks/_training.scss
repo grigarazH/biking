@@ -36,6 +36,17 @@
         }
         line-height: 28px;
         color: map-get($map: $theme-light, $key: color-primary);
+        transition: opacity .2s linear .15s;
+
+        &:hover {
+            opacity: .75;
+            cursor: pointer;
+        }
+
+        &_theme_dark {
+            color: map-get($map: $theme-dark, $key: color-primary);
+            cursor: pointer;
+        }
     }
 
     &__image {

@@ -8,6 +8,10 @@
         margin: 94px 0 0;
     }
 
+    &_theme_dark {
+        background-color: map-get($map: $theme-dark, $key: color-background);
+    }
+
     @media screen and (max-width: 1079px) {
         &__lead {
             margin: 74px 0 0;

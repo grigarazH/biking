@@ -7,10 +7,17 @@
     position: relative;
 
     &__title {
-        @include section-title($theme-light);
+        font: {
+            family: $default-font;
+            weight: bold;
+            size: 55px;
+        }
+        line-height: 60px;
+        letter-spacing: -0.5px;
+        color: map-get($map: $theme-light, $key: color-primary);
 
         &_theme_dark {
-            @include section-title($theme-dark);
+            color: map-get($map: $theme-light, $key: color-primary);
         }
     }
 
@@ -19,15 +26,18 @@
         bottom: 74px;
     }
 
-    &__about {
-        max-width: 460px;
-    }
-
     &__description {
-        @include section-description($theme-light);
+        font: {
+            family: $default-font;
+            weight: normal;
+            size: 18px;
+        }
+        line-height: 28px;
+        color: map-get($map: $theme-light, $key: color-secondary);
+        opacity: 0.7;
 
         &_theme_dark {
-            @include section-description($theme-dark);
+            color: map-get($map: $theme-dark, $key: color-secondary);
         }
     }
 
@@ -43,19 +53,13 @@
 
     @media screen and (max-width: 574px) {
         &__title {
-            @include section-title($theme-light, false);
-
-            &_theme_dark {
-                @include section-title($theme-dark, false);
-            }
+            font-size: 32px;
+            line-height: 40px;
         }
 
         &__description {
-            @include section-description($theme-light, false);
-            
-            &_theme_dark {
-                @include section-description($theme-dark, false);
-            }
+            font-size: 12px;
+            line-height: 18px;
         }
     }
 }

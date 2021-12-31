@@ -79,8 +79,16 @@
         &::after {
             width: 132px;
             height: 2px;
-            background: #d7d4d4;
+            background: map-get($map: $theme-light, $key: color-bike-line);
             content: ' ';
+        }
+
+        &_theme_dark {
+            color: map-get($map: $theme-dark, $key: color-primary);
+
+            &::after {
+                background: map-get($map: $theme-dark, $key: color-bike-line);
+            }
         }
         
         grid-area: bike-title;

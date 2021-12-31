@@ -22,14 +22,28 @@
     }
 
     &__link {
-        @include link();
+        @include link;
         font-size: 14px;
         line-height: 18px;
         color: map-get($map: $theme-light, $key: color-primary);
+        transition: opacity .2s linear .15s;
+
+        &:hover {
+            opacity: .75;
+        }
+
+        &_theme_dark {
+            color: map-get($map: $theme-dark, $key: color-primary);
+            opacity: .65;
+        }
     }
 
     &__menu-toggle {
         display: none;
+    }
+
+    &_theme_dark {
+        background-color: map-get($map: $theme-dark, $key: color-background);
     }
 
     @media screen and (max-width: 574px) {
@@ -40,17 +54,22 @@
         }
 
         &__menu-toggle {
+            background-color: transparent;
             display: block;
             border: none;
             width: 22px;
             height: 19px;
             background-image: url(../../images/menu.svg);
-        }
 
-        &__menu-toggle_active {
-            width: 32px;
-            height: 33px;
-            background-image: url(../../images/close.svg);
+            &_active {
+                width: 32px;
+                height: 33px;
+                background-image: url(../../images/close.svg);
+            }
+
+            &_theme_dark {
+                filter: brightness(0%) saturate(100%) invert(100%) sepia(0%) saturate(1%) hue-rotate(99deg) brightness(106%) contrast(101%);
+            }
         }
     }
 }

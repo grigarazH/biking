@@ -4,6 +4,8 @@
     align-items: center;
 
     &__wrapper {
+        display: block;
+        position: relative;
         width: 44px;
         height: 24px;
         border-radius: 9999px;
@@ -12,9 +14,23 @@
         box-sizing: border-box;
         display: flex;
         justify-content: flex-start;
+        transition: background-color .4s linear .2s;
+
+        &_theme_dark {
+            background-color: #545454;
+        }
     }
 
-    &__button {
+    &__checkbox {
+        height: 1px;
+        width: 1px;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+        position: absolute;
+    }
+
+    &__pseudo-item {
+        display: block;
         border: none;
         width: 20px;
         height: 20px;

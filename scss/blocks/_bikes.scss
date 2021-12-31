@@ -26,13 +26,38 @@
         font: {
             family: $default-font;
             size: 18px;
-            weight: 600;
+            weight: 400;
         }
+        color: map-get($map: $theme-light, $key: color-primary);
         line-height: 28px;
         opacity: .7;
+        transition: opacity .2s linear .15s;
+        transition: font-weight .2s linear .15s;
+
+        &:hover {
+            opacity: .6;
+            cursor: pointer;
+        }
 
         &_active {
+            font-weight: 600;
             opacity: 1;
+
+            &:hover {
+                opacity: .75;
+            }
+        }
+
+        &_theme_dark {
+            color: map-get($map: $theme-dark, $key: color-primary);
+            
+            &:hover {
+                opacity: .5;
+            }
+
+            &.bikes__type_active:hover {
+                opacity: .65;
+            }
         }
     }
 
@@ -54,8 +79,15 @@
     }
 
     &__bike-container {
+        display: block;
         margin: 0;
         padding: 0;
+        text-decoration: none;
+        transition: opacity .2s linear .15s;
+
+        &:hover {
+            opacity: .7;
+        }
     }
 
     &__bike-image {
@@ -79,6 +111,10 @@
         }
         line-height: 22px;
         color: map-get($map: $theme-light, $key: color-primary);
+
+        &_theme_dark {
+            color: map-get($map: $theme-dark, $key: color-primary);
+        }
     }
 
     &__paginator {
@@ -121,6 +157,7 @@
                 size: 18px;
                 weight: 600;
             }
+            color: map-get($map: $theme-light, $key: color-primary);
             line-height: 18px;
             max-width: 150px;
             width: 100%;
@@ -131,6 +168,11 @@
             background-repeat: no-repeat;
             border: 1px solid map-get($map: $theme-light, $key: color-border);
             border-radius: 2px;
+
+            &_theme_dark {
+                color: map-get($map: $theme-dark, $key: color-primary);
+                border: 1px solid map-get($map: $theme-dark, $key: color-border);
+            }
         }
 
         &__bike-list {
@@ -162,6 +204,10 @@
             justify-content: center;
             width: 100%;
             margin: 0;
+            
+            &_theme_dark {
+                color: map-get($map: $theme-light, $key: color-primary);
+            }
         }
 
         &__paginator {

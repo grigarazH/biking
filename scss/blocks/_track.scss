@@ -107,6 +107,18 @@
         &_type_next {
             background-image: url(../../images/button-next.svg);
         }
+
+        &_theme_dark {
+            background-color: map-get($map: $theme-dark, $key: color-button);
+
+            &.track__button_type_prev {
+                background-image: url(../../images/button-prev-dark.svg);
+            }
+
+            &.track__button_type_next {
+                background-image: url(../../images/button-next-dark.svg);
+            }
+        }
     }
 
     @media screen and (max-width: 1080px) {

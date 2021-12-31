@@ -458,6 +458,9 @@ template {
 .page__lead {
   margin: 94px 0 0;
 }
+.page_theme_dark {
+  background-color: #333;
+}
 @media screen and (max-width: 1079px) {
   .page__lead {
     margin: 74px 0 0;
@@ -491,9 +494,20 @@ template {
   font-size: 14px;
   line-height: 18px;
   color: #151515;
+  transition: opacity 0.2s linear 0.15s;
+}
+.header__link:hover {
+  opacity: 0.75;
+}
+.header__link_theme_dark {
+  color: #fff;
+  opacity: 0.65;
 }
 .header__menu-toggle {
   display: none;
+}
+.header_theme_dark {
+  background-color: #333;
 }
 @media screen and (max-width: 574px) {
   .header {
@@ -503,6 +517,7 @@ template {
     display: none;
   }
   .header__menu-toggle {
+    background-color: transparent;
     display: block;
     border: none;
     width: 22px;
@@ -514,6 +529,9 @@ template {
     height: 33px;
     background-image: url(../../images/close.svg);
   }
+  .header__menu-toggle_theme_dark {
+    filter: brightness(0%) saturate(100%) invert(100%) sepia(0%) saturate(1%) hue-rotate(99deg) brightness(106%) contrast(101%);
+  }
 }
 
 .switcher {
@@ -522,6 +540,8 @@ template {
   align-items: center;
 }
 .switcher__wrapper {
+  display: block;
+  position: relative;
   width: 44px;
   height: 24px;
   border-radius: 9999px;
@@ -530,8 +550,20 @@ template {
   box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
+  transition: background-color 0.4s linear 0.2s;
 }
-.switcher__button {
+.switcher__wrapper_theme_dark {
+  background-color: #545454;
+}
+.switcher__checkbox {
+  height: 1px;
+  width: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
+}
+.switcher__pseudo-item {
+  display: block;
   border: none;
   width: 20px;
   height: 20px;
@@ -539,7 +571,7 @@ template {
   border-radius: 50%;
   transition: transform 0.4s linear 0.2s;
 }
-.switcher__button_theme_dark {
+.switcher__pseudo-item_theme_dark {
   transform: translateX(20px);
 }
 .switcher__icon_type_light {
@@ -570,6 +602,7 @@ template {
     bottom: 0;
     z-index: 3;
     transform: translateX(100vw);
+    transition: transform 0.4s linear 0.2s;
     background-color: #f4f4f4;
   }
   .menu_active {
@@ -592,6 +625,12 @@ template {
     line-height: 18px;
     color: #151515;
   }
+  .menu__link_theme_dark {
+    color: #fff;
+  }
+  .menu_theme_dark {
+    background-color: #333;
+  }
 }
 
 .section {
@@ -608,19 +647,11 @@ template {
   color: #151515;
 }
 .section__title_theme_dark {
-  font-family: "Inter", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 55px;
-  line-height: 60px;
-  letter-spacing: -0.5px;
-  color: #fff;
+  color: #151515;
 }
 .section__anchor {
   position: relative;
   bottom: 74px;
-}
-.section__about {
-  max-width: 460px;
 }
 .section__description {
   font-family: "Inter", Arial, sans-serif;
@@ -631,12 +662,7 @@ template {
   opacity: 0.7;
 }
 .section__description_theme_dark {
-  font-family: "Inter", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 28px;
-  color: #504343;
-  opacity: 0.7;
+  color: #e6e6e6;
 }
 .section_theme_dark {
   background-color: #333;
@@ -648,36 +674,12 @@ template {
 }
 @media screen and (max-width: 574px) {
   .section__title {
-    font-family: "Inter", Arial, sans-serif;
-    font-weight: bold;
     font-size: 32px;
     line-height: 40px;
-    letter-spacing: -0.5px;
-    color: #151515;
-  }
-  .section__title_theme_dark {
-    font-family: "Inter", Arial, sans-serif;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -0.5px;
-    color: #fff;
   }
   .section__description {
-    font-family: "Inter", Arial, sans-serif;
-    font-weight: normal;
     font-size: 12px;
     line-height: 18px;
-    color: #222222;
-    opacity: 0.7;
-  }
-  .section__description_theme_dark {
-    font-family: "Inter", Arial, sans-serif;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 18px;
-    color: #504343;
-    opacity: 0.7;
   }
 }
 
@@ -755,6 +757,12 @@ template {
   height: 2px;
   background: #d7d4d4;
   content: " ";
+}
+.lead__bike-title_theme_dark {
+  color: #fff;
+}
+.lead__bike-title_theme_dark::after {
+  background: #707070;
 }
 @media screen and (max-width: 1287px) {
   .lead {
@@ -886,6 +894,10 @@ template {
 .eddie__quote {
   margin: 0;
   padding: 0;
+}
+.eddie__quote-text {
+  margin: 0;
+  padding: 0;
   font-family: "Inter", Arial, sans-serif;
   font-size: 34px;
   font-weight: 600;
@@ -893,7 +905,7 @@ template {
   letter-spacing: -0.5px;
   color: #151515;
 }
-.eddie__quote_theme_dark {
+.eddie__quote-text_theme_dark {
   color: #fff;
 }
 .eddie__author {
@@ -907,6 +919,10 @@ template {
   font-size: 20px;
   font-weight: 500;
   line-height: 32px;
+  color: #151515;
+}
+.eddie__author-name_theme_dark {
+  color: #fff;
 }
 .eddie__author-occupation {
   margin: 6px 0 0;
@@ -915,6 +931,10 @@ template {
   font-weight: 400;
   line-height: 28px;
   opacity: 0.7;
+  color: #151515;
+}
+.eddie__author-occupation_theme_dark {
+  color: #fff;
 }
 @media screen and (max-width: 1389px) {
   .eddie {
@@ -1089,6 +1109,15 @@ template {
 .track__button_type_next {
   background-image: url(../../images/button-next.svg);
 }
+.track__button_theme_dark {
+  background-color: #434343;
+}
+.track__button_theme_dark.track__button_type_prev {
+  background-image: url(../../images/button-prev-dark.svg);
+}
+.track__button_theme_dark.track__button_type_next {
+  background-image: url(../../images/button-next-dark.svg);
+}
 @media screen and (max-width: 1080px) {
   .track {
     padding-left: 18px;
@@ -1192,6 +1221,9 @@ template {
 .paginator__item_active {
   background-color: #151515;
 }
+.paginator__item_theme_dark.paginator__item_active {
+  background-color: #151515;
+}
 @media screen and (max-width: 574px) {
   .paginator__item {
     width: 4px;
@@ -1223,12 +1255,32 @@ template {
   background-color: transparent;
   font-family: "Inter", Arial, sans-serif;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 400;
+  color: #151515;
   line-height: 28px;
   opacity: 0.7;
+  transition: opacity 0.2s linear 0.15s;
+  transition: font-weight 0.2s linear 0.15s;
+}
+.bikes__type:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 .bikes__type_active {
+  font-weight: 600;
   opacity: 1;
+}
+.bikes__type_active:hover {
+  opacity: 0.75;
+}
+.bikes__type_theme_dark {
+  color: #fff;
+}
+.bikes__type_theme_dark:hover {
+  opacity: 0.5;
+}
+.bikes__type_theme_dark.bikes__type_active:hover {
+  opacity: 0.65;
 }
 .bikes__type-select {
   display: none;
@@ -1245,8 +1297,14 @@ template {
   justify-content: center;
 }
 .bikes__bike-container {
+  display: block;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  transition: opacity 0.2s linear 0.15s;
+}
+.bikes__bike-container:hover {
+  opacity: 0.7;
 }
 .bikes__bike-image {
   box-sizing: border-box;
@@ -1268,6 +1326,9 @@ template {
   font-weight: 600;
   line-height: 22px;
   color: #151515;
+}
+.bikes__bike-heading_theme_dark {
+  color: #fff;
 }
 .bikes__paginator {
   display: none;
@@ -1308,6 +1369,7 @@ template {
     font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
     font-weight: 600;
+    color: #151515;
     line-height: 18px;
     max-width: 150px;
     width: 100%;
@@ -1320,6 +1382,10 @@ template {
     background-repeat: no-repeat;
     border: 1px solid #e3e3e3;
     border-radius: 2px;
+  }
+  .bikes__type-select_theme_dark {
+    color: #fff;
+    border: 1px solid #e3e3e3;
   }
   .bikes__bike-list {
     overflow-x: hidden;
@@ -1347,6 +1413,9 @@ template {
     justify-content: center;
     width: 100%;
     margin: 0;
+  }
+  .bikes__bike-heading_theme_dark {
+    color: #151515;
   }
   .bikes__paginator {
     margin: 20px 0 0;
@@ -1400,6 +1469,15 @@ template {
   font-weight: 600;
   line-height: 28px;
   color: #151515;
+  transition: opacity 0.2s linear 0.15s;
+}
+.training__link:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+.training__link_theme_dark {
+  color: #fff;
+  cursor: pointer;
 }
 .training__image {
   width: 580px;
@@ -1468,9 +1546,13 @@ template {
   line-height: 32px;
   color: #151515;
 }
+.footer__title_theme_dark {
+  color: #fff;
+}
 .footer__form {
   position: relative;
   max-width: 360px;
+  margin: 50px 0 0;
 }
 .footer__input {
   border: 1px solid rgba(199, 199, 199, 0.5);
@@ -1478,6 +1560,7 @@ template {
   background-color: transparent;
   padding: 11px 20px;
   width: 100%;
+  box-sizing: border-box;
   font-family: "Inter", Arial, sans-serif;
   font-weight: 500;
   font-size: 13px;
@@ -1485,13 +1568,13 @@ template {
   color: #151515;
 }
 .footer__input::-moz-placeholder {
-  color: "34, 34, 34";
+  opacity: 0.7;
 }
 .footer__input:-ms-input-placeholder {
-  color: "34, 34, 34";
+  opacity: 0.7;
 }
 .footer__input::placeholder {
-  color: "34, 34, 34";
+  opacity: 0.7;
 }
 .footer__input:hover {
   cursor: pointer;
@@ -1511,6 +1594,17 @@ template {
   font-size: 13px;
   line-height: 28px;
   color: #151515;
+  background: transparent;
+  z-index: 2;
+}
+.footer__input_theme_dark {
+  color: #fff;
+}
+.footer__input_theme_dark:focus {
+  border: 1px solid #e6e6e6;
+}
+.footer__input_theme_dark:focus + .footer__submit {
+  color: #fff;
 }
 .footer__submit {
   display: none;
@@ -1523,6 +1617,7 @@ template {
   justify-content: space-between;
   align-items: center;
   vertical-align: center;
+  margin: 100px 0 0;
 }
 .footer__copyright {
   margin: 0;
@@ -1531,6 +1626,12 @@ template {
   font-weight: 600;
   line-height: 20px;
   color: #cfcfcf;
+}
+.footer__copyright_theme_dark {
+  color: #676767;
+}
+.footer_theme_dark {
+  background: #2f2f2f;
 }
 @media screen and (max-width: 574px) {
   .footer {
@@ -1541,6 +1642,7 @@ template {
   }
   .footer__form {
     max-width: none;
+    margin: 40px 0 0;
   }
   .footer__about::after {
     content: " ";
@@ -1548,6 +1650,9 @@ template {
     width: 38px;
     height: 38px;
     background-image: url(../../images/logo.svg);
+  }
+  .footer__about_theme_dark::after {
+    filter: brightness(0%) saturate(100%) invert(100%) sepia(0%) saturate(1%) hue-rotate(99deg) brightness(106%) contrast(101%);
   }
   .footer__switcher {
     display: none;
