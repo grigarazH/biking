@@ -555,6 +555,10 @@ template {
 .switcher__wrapper_theme_dark {
   background-color: #545454;
 }
+.switcher__wrapper:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
 .switcher__checkbox {
   height: 1px;
   width: 1px;
@@ -870,7 +874,7 @@ template {
 .button:hover::before {
   width: 100%;
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 574px) {
   .button {
     font-size: 13px;
     line-height: 19px;
@@ -980,7 +984,7 @@ template {
     height: 280px;
   }
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 574px) {
   .eddie__quote {
     font-size: 23px;
     line-height: 29px;
@@ -1118,7 +1122,7 @@ template {
 .track__button_theme_dark.track__button_type_next {
   background-image: url(../../images/button-next-dark.svg);
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1079px) {
   .track {
     padding-left: 18px;
   }

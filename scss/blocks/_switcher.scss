@@ -19,6 +19,11 @@
         &_theme_dark {
             background-color: #545454;
         }
+
+        &:hover {
+            opacity: .7;
+            cursor: pointer;
+        }
     }
 
     &__checkbox {
