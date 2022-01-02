@@ -171,6 +171,8 @@
 
             &_theme_dark {
                 color: map-get($map: $theme-dark, $key: color-primary);
+                background-color: map-get($theme-dark, $key: color-background);
+                background-image: url(../../images/select-dark.svg);
                 border: 1px solid map-get($map: $theme-dark, $key: color-border);
             }
         }

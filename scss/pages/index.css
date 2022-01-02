@@ -1389,7 +1389,9 @@ template {
   }
   .bikes__type-select_theme_dark {
     color: #fff;
-    border: 1px solid #e3e3e3;
+    background-color: #333;
+    background-image: url(../../images/select-dark.svg);
+    border: 1px solid #3f3f3f;
   }
   .bikes__bike-list {
     overflow-x: hidden;
