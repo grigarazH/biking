@@ -93,7 +93,7 @@
         padding: 40px 18px 40px;
 
         &::before {
-            @include section-separator;
+            @include section-separator($theme-light);
         }
 
         &__image {
@@ -111,6 +111,12 @@
 
         &__author-occupation {
             margin: 4px 0 0;
+        }
+
+        &_theme_dark {
+            &::before {
+                @include section-separator($theme-dark);
+            }
         }
     }
 

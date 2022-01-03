@@ -977,6 +977,12 @@ template {
   .eddie__author-occupation {
     margin: 4px 0 0;
   }
+  .eddie_theme_dark::before {
+    display: block;
+    content: " ";
+    width: 100%;
+    border-top: 1px solid #3f3f3f;
+  }
 }
 @media screen and (max-width: 681px) {
   .eddie__image {
@@ -1126,6 +1132,18 @@ template {
   .track {
     padding-left: 18px;
   }
+  .track::before {
+    display: block;
+    content: " ";
+    width: 100%;
+    border-top: 1px solid #e3e3e3;
+  }
+  .track_theme_dark::before {
+    display: block;
+    content: " ";
+    width: 100%;
+    border-top: 1px solid #3f3f3f;
+  }
 }
 
 @media screen and (max-width: 574px) {
@@ -1172,10 +1190,6 @@ template {
     align-items: center;
   }
   .track::before {
-    display: block;
-    content: " ";
-    width: 100%;
-    border-top: 1px solid #e3e3e3;
     grid-area: separator;
   }
   .track__description {
@@ -1428,6 +1442,12 @@ template {
     display: flex;
     justify-content: center;
   }
+  .bikes_theme_dark::before {
+    display: block;
+    content: " ";
+    width: 100%;
+    border-top: 1px solid #3f3f3f;
+  }
 }
 @media screen and (max-width: 574px) {
   .bikes__bike-image {
@@ -1519,6 +1539,12 @@ template {
   .training__image {
     margin: 40px 0 0;
     align-self: center;
+  }
+  .training_theme_dark::before {
+    display: block;
+    content: " ";
+    width: 100%;
+    border-top: 1px solid #3f3f3f;
   }
 }
 @media screen and (max-width: 611px) {

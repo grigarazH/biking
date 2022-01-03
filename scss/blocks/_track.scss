@@ -123,6 +123,16 @@
 
     @media screen and (max-width: $screen-tablet) {
         padding-left: 18px;
+
+        &::before {
+            @include section-separator($theme-light);
+        }
+
+        &_theme_dark {
+            &::before {
+                @include section-separator($theme-dark);
+            }
+        }
     }
 }
 
@@ -160,7 +170,6 @@
         align-items: center;
 
         &::before {
-            @include section-separator();
             grid-area: separator;
         }
 

@@ -1,8 +1,8 @@
-@mixin section-separator {
+@mixin section-separator($theme) {
   display: block;
   content: " ";
   width: 100%;
-  border-top: 1px solid map-get($map: $theme-light, $key: color-border);
+  border-top: 1px solid map-get($map: $theme, $key: color-border);
 }
 
 @mixin link {

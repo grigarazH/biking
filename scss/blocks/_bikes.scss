@@ -138,7 +138,7 @@
     @media screen and (max-width: 679px) {
         padding: 40px 18px 40px;
         &::before {
-            @include section-separator();
+            @include section-separator($theme-light);
         }
 
         &__heading {
@@ -216,6 +216,12 @@
             margin: 20px 0 0;
             display: flex;
             justify-content: center;
+        }
+
+        &_theme_dark {
+            &::before {
+                @include section-separator($theme-dark);
+            }
         }
     }
 
