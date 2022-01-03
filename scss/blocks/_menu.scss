@@ -35,10 +35,18 @@
             @include link;
             font-size: 18px;
             line-height: 18px;
-            color: map-get($map: $theme-light, $key: color-primary);    
+            color: map-get($map: $theme-light, $key: color-primary);
+
+            &:hover {
+                opacity: .75;
+            }    
 
             &_theme_dark {
                 color: map-get($map: $theme-dark, $key: color-primary);
+                
+                &:hover {
+                    opacity: .65;
+                }
             }
         }
 

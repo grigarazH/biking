@@ -635,8 +635,14 @@ template {
     line-height: 18px;
     color: #151515;
   }
+  .menu__link:hover {
+    opacity: 0.75;
+  }
   .menu__link_theme_dark {
     color: #fff;
+  }
+  .menu__link_theme_dark:hover {
+    opacity: 0.65;
   }
   .menu_theme_dark {
     background-color: #333;
