@@ -1,6 +1,8 @@
 .footer {
+    box-sizing: border-box;
     background-color: map-get($map: $theme-light, $key: color-footer-background);
     padding: 80px 120px 60px;
+    max-width: 1440px;
 
     &__title {
         max-width: 229px;

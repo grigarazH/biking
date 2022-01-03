@@ -4,6 +4,14 @@
     background-color: map-get($map: $theme-light, $key: color-background);
     scroll-padding-top: 74px;
 
+    &__content {
+        margin: 0 auto;
+    }
+
+    &__footer {
+        margin: 0 auto;
+    }
+
     &__lead {
         margin: 94px 0 0;
     }

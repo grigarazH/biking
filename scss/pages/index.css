@@ -455,6 +455,12 @@ template {
   background-color: #f4f4f4;
   scroll-padding-top: 74px;
 }
+.page__content {
+  margin: 0 auto;
+}
+.page__footer {
+  margin: 0 auto;
+}
 .page__lead {
   margin: 94px 0 0;
 }
@@ -635,6 +641,10 @@ template {
   .menu_theme_dark {
     background-color: #333;
   }
+}
+
+.content {
+  max-width: 1440px;
 }
 
 .section {
@@ -886,6 +896,7 @@ template {
   padding: 120px 120px 60px;
   grid-template-columns: 650px minmax(auto, 470px);
   justify-content: space-between;
+  box-sizing: border-box;
 }
 .eddie__image {
   width: 650px;
@@ -1046,6 +1057,7 @@ template {
 }
 .track {
   padding: 60px 0 60px 120px;
+  box-sizing: border-box;
 }
 .track__title {
   margin: 0;
@@ -1251,6 +1263,7 @@ template {
 
 .bikes {
   padding: 0 120px 60px;
+  box-sizing: border-box;
 }
 .bikes__heading {
   display: flex;
@@ -1471,6 +1484,7 @@ template {
   grid-template-areas: ". ." "title image" "description image" "links image";
   justify-content: space-between;
   padding: 150px 120px 120px;
+  box-sizing: border-box;
 }
 .training__title {
   margin: 0;
@@ -1567,8 +1581,10 @@ template {
 }
 
 .footer {
+  box-sizing: border-box;
   background-color: #efefef;
   padding: 80px 120px 60px;
+  max-width: 1440px;
 }
 .footer__title {
   max-width: 229px;
