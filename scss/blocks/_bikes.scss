@@ -100,7 +100,7 @@
         object-fit: contain;
         border-radius: 20px;
         background: map-get($theme-light, color-background);
-        box-shadow: 0 20px 140px rgba(black, .06);
+        filter: drop-shadow(0 20px 140px rgba(black, .06));
     }
 
     &__bike-heading {
@@ -129,6 +129,8 @@
     @media screen and (max-width: 1231px) {
         &__bike-list {
             overflow-x: scroll;
+            margin: 0 0 -160px;
+            padding: 120px 0 160px;
 
             &_active {
                 justify-content: start;
@@ -181,18 +183,22 @@
         &__bike-list {
             overflow-x: hidden;
             margin: 20px auto 0;
+            padding: 0;
             max-width: 380px;
             box-sizing: border-box;
-            box-shadow: 0 20px 140px rgba(black, .06);
+            filter: drop-shadow(0 20px 140px rgba(black, .06));
         }
 
         &__bike-image {
             width: 380px;
             height: 400px;
             padding: 20px 20px 40px;
+            filter: none;
         }
 
         &__bike-container {
+            width: 380px;
+            height: 400px;
             box-sizing: border-box;
             background-color: #fff;
             border-radius: 20px;
@@ -231,6 +237,11 @@
             width: 284px;
             height: 306px;
             padding: 14.95px 14.95px 36.95px;
+        }
+
+        &__bike-container {
+            width: 284px;
+            height: 306px;
         }
 
         &__bike-list {

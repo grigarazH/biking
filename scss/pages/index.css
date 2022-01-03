@@ -706,6 +706,7 @@ template {
   justify-content: space-between;
   align-items: start;
   box-sizing: border-box;
+  overflow: visible;
   width: 100%;
   grid-template-areas: "title image" "description image" "button image" "bike-title image";
 }
@@ -717,6 +718,7 @@ template {
   position: relative;
   grid-area: image;
   align-self: stretch;
+  overflow: visible;
 }
 .lead__description {
   margin: 80px 0 0;
@@ -745,7 +747,6 @@ template {
   box-sizing: border-box;
   padding: 20px 50px;
   background-color: #f4f4f4;
-  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
   filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
 }
 .lead__button {
@@ -906,6 +907,9 @@ template {
 .eddie__quote-container {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .eddie__quote {
   margin: 0;
@@ -926,7 +930,6 @@ template {
 }
 .eddie__author {
   display: block;
-  margin: 262px 0 0;
   padding: 0;
 }
 .eddie__author-name {
@@ -958,6 +961,9 @@ template {
   }
 }
 @media screen and (max-width: 1180px) {
+  .eddie {
+    grid-template-columns: 500px minmax(auto, 470px);
+  }
   .eddie__image {
     width: 500px;
     height: 350px;
@@ -1003,7 +1009,7 @@ template {
   }
 }
 @media screen and (max-width: 574px) {
-  .eddie__quote {
+  .eddie__quote-text {
     font-size: 23px;
     line-height: 29px;
   }
@@ -1349,7 +1355,7 @@ template {
      object-fit: contain;
   border-radius: 20px;
   background: #f4f4f4;
-  box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+  filter: drop-shadow(0 20px 140px rgba(0, 0, 0, 0.06));
 }
 .bikes__bike-heading {
   margin: 22px 0 0 6px;
@@ -1373,6 +1379,8 @@ template {
 @media screen and (max-width: 1231px) {
   .bikes__bike-list {
     overflow-x: scroll;
+    margin: 0 0 -160px;
+    padding: 120px 0 160px;
   }
   .bikes__bike-list_active {
     justify-content: start;
@@ -1424,16 +1432,20 @@ template {
   .bikes__bike-list {
     overflow-x: hidden;
     margin: 20px auto 0;
+    padding: 0;
     max-width: 380px;
     box-sizing: border-box;
-    box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+    filter: drop-shadow(0 20px 140px rgba(0, 0, 0, 0.06));
   }
   .bikes__bike-image {
     width: 380px;
     height: 400px;
     padding: 20px 20px 40px;
+    filter: none;
   }
   .bikes__bike-container {
+    width: 380px;
+    height: 400px;
     box-sizing: border-box;
     background-color: #fff;
     border-radius: 20px;
@@ -1468,6 +1480,10 @@ template {
     width: 284px;
     height: 306px;
     padding: 14.95px 14.95px 36.95px;
+  }
+  .bikes__bike-container {
+    width: 284px;
+    height: 306px;
   }
   .bikes__bike-list {
     max-width: 284px;

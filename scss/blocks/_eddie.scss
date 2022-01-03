@@ -15,6 +15,9 @@
     &__quote-container {
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__quote {
@@ -41,7 +44,6 @@
 
     &__author {
         display: block;
-        margin: 262px 0 0;
         padding: 0;
     }
 
@@ -81,6 +83,8 @@
     }
 
     @media screen and (max-width: 1180px) {
+        grid-template-columns: 500px minmax(auto, 470px);
+
         &__image {
             width: 500px;
             height: 350px;
@@ -129,7 +133,7 @@
     }
 
     @media screen and (max-width: $screen-mobile) {
-        &__quote {
+        &__quote-text {
             font-size: 23px;
             line-height: 29px;
         }
