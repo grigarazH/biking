@@ -49,7 +49,7 @@ const toggleTheme = () => {
     const sectionDescriptions = document.querySelectorAll(".section__description");
     const leadBikeTitle = document.querySelector(".lead__bike-title");
     const eddieSection = document.querySelector(".eddie");
-    const eddieQuote = document.querySelector(".eddie__quote");
+    const eddieQuoteText = document.querySelector(".eddie__quote-text");
     const eddieAuthorName = document.querySelector(".eddie__author-name");
     const eddieAuthorOccupation = document.querySelector(".eddie__author-occupation");
     const bikesSection = document.querySelector(".bikes");
@@ -76,7 +76,7 @@ const toggleTheme = () => {
     sectionDescriptions.forEach(description => description.classList.toggle("section__description_theme_dark"));
     leadBikeTitle.classList.toggle("lead__bike-title_theme_dark");
     eddieSection.classList.toggle("eddie_theme_dark");
-    eddieQuote.classList.toggle("eddie__quote_theme_dark");
+    eddieQuoteText.classList.toggle("eddie__quote-text_theme_dark");
     eddieAuthorName.classList.toggle("eddie__author-name_theme_dark");
     eddieAuthorOccupation.classList.toggle("eddie__author-occupation_theme_dark");
     trackSection.classList.toggle("track_theme_dark");

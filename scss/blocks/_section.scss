@@ -15,9 +15,8 @@
         line-height: 60px;
         letter-spacing: -0.5px;
         color: map-get($map: $theme-light, $key: color-primary);
-
         &_theme_dark {
-            color: map-get($map: $theme-light, $key: color-primary);
+            color: map-get($map: $theme-dark, $key: color-primary);
         }
     }
 
