@@ -117,6 +117,7 @@
     }
 
     @media screen and (max-width: 1079px) {
+        min-height: initial;
         grid-template-columns: auto;
         grid-template-rows: repeat(4, min-content);
         grid-template-areas: "title" 
