@@ -1,0 +1,118 @@
+.training {
+    display: grid;
+    grid-template-columns: 460px 580px;
+    grid-template-areas: ". ."
+                         "title image"
+                        "description image"
+                        "links image";
+    justify-content: space-between;
+    padding: 150px 120px 120px;
+    box-sizing: border-box;
+
+    &__title {
+        margin: 0;
+        grid-area: title;
+    }
+
+    &__description {
+        margin: 50px 0 0;
+        grid-area: description;
+    }
+
+    &__links {
+        display: flex;
+        margin: 182px 0 0;
+        padding: 0;
+        gap: 30px;
+        list-style-type: none;
+        grid-area: links;
+    }
+
+    &__link {
+        text-decoration: none;
+        font: {
+            family: $default-font;
+            size: 18px;
+            weight: 600;
+        }
+        line-height: 28px;
+        color: map-get($map: $theme-light, $key: color-primary);
+        transition: opacity .2s linear .15s;
+
+        &:hover {
+            opacity: .75;
+            cursor: pointer;
+        }
+
+        &_theme_dark {
+            color: map-get($map: $theme-dark, $key: color-primary);
+            cursor: pointer;
+        }
+    }
+
+    &__image {
+        width: 580px;
+        height: 460px;
+        grid-area: image;
+    }
+    
+    @media screen and (max-width: 1389px) {
+        padding: 150px 18px 120px;
+    }
+
+    @media screen and (max-width: 1079px) {
+        padding: 80px 18px 60px;
+        display: flex;
+        flex-direction: column;
+
+        &::before {
+            @include section-separator($theme-light);
+        }
+
+        &__title {
+            margin: 40px 0 0;
+        }
+
+        &__description {
+            margin: 40px 0 0;
+        }
+
+        &__links {
+            margin: 40px 0 0;
+        }
+
+        &__image {
+            margin: 40px 0 0;
+            align-self: center;
+        }
+
+        &_theme_dark {
+            &::before {
+                @include section-separator($theme-dark);
+            }
+        }
+    }
+
+    @media screen and (max-width: 611px) {
+        &__image {
+            width: 375px;
+            height: 297px;
+        }
+    }
+
+    @media screen and (max-width: $screen-mobile) {
+        &__link {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    @media screen and (max-width: 407px) {
+        &__image {
+            width: 284px;
+            height: 225px;
+        }
+    }
+
+
+}

@@ -1,0 +1,36 @@
+.paginator {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &__item {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        padding: 0;
+        background-color: map-get($map: $theme-light, $key: color-paginator);
+        border: none;
+
+            
+        &_active {
+            background-color: map-get($map: $theme-light, $key: color-primary);
+        }
+
+
+        &_theme_dark {
+            &.paginator__item_active {
+                background-color: map-get($map: $theme-light, $key: color-primary);
+            }
+        }
+    }
+
+    @media screen and (max-width: $screen-mobile) {
+
+        &__item {
+            width: 4px;
+            height: 4px;
+        }
+    }
+}

@@ -1,0 +1,178 @@
+@import '../utilities/variables';
+
+.lead {
+    display: grid;
+    min-height: 837px;
+    grid-template-columns: 460px 810px;
+    grid-template-rows: repeat(3, min-content) auto;
+    justify-content: space-between;
+    align-items: start;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 100%;
+    grid-template-areas: "title image"
+                         "description image"
+                         "button image"
+                         "bike-title image";
+
+    &__title {
+        margin: 50px 0 0;
+        grid-area: title;
+    }
+
+    &__image-container {
+        position: relative;
+        grid-area: image;
+        align-self: stretch;
+        overflow: visible;
+    }
+
+    &__description {
+        margin: 80px 0 0;
+        grid-area: description;
+    }
+
+    
+    &__image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 610px;
+        height: 836px;
+        white-space: nowrap;
+    }
+
+    &__bike-fix {
+        position: sticky;
+        top: 327px + 94px;
+        margin-bottom: 79px;
+        width: 440px;
+        height: 300px;
+        object-position: center;
+        object-fit: contain;
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding: 20px 50px;
+        background-color: map-get($map: $theme-light, $key: color-background);
+        filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, .2));
+    }
+
+    &__button {
+        margin: 49px 0 0;
+        min-width: 180px;
+        grid-area: button;
+        justify-self: start;
+    }
+
+    &__bike-title {
+        margin: 167px 0 0;
+        font: {
+            family: $default-font;
+            size: 18px;
+            weight: 400;
+        }
+        line-height: 18px;
+        color: map-get($map: $theme-light, $key: color-primary);
+        display: flex;
+        gap: 30px;
+        align-items: center;
+
+        &::after {
+            width: 132px;
+            height: 2px;
+            background: map-get($map: $theme-light, $key: color-bike-line);
+            content: ' ';
+        }
+
+        &_theme_dark {
+            color: map-get($map: $theme-dark, $key: color-primary);
+
+            &::after {
+                background: map-get($map: $theme-dark, $key: color-bike-line);
+            }
+        }
+        
+        grid-area: bike-title;
+    }
+
+    @media screen and (max-width: 1287px) {
+        grid-template-columns: 460px 602px;
+
+        &__image-container {
+            min-height: 680px;
+        }
+
+        &__image {
+            width: 496px;
+            height: 680px;
+        }
+
+        &__bike-fix {
+            top: 265px + 94px;
+            margin-bottom: 64px;
+        }
+
+        &__bike-title {
+            margin: 72px 0 0;
+        }
+    }
+
+    @media screen and (max-width: 1079px) {
+        min-height: initial;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, min-content);
+        grid-template-areas: "title" 
+                            "image" 
+                            "description"
+                            "button";
+        width: 100%;
+        padding: 40px 18px;
+        justify-items: stretch;
+        gap: 40px;
+
+        &__title {
+            margin: 0;
+        }
+
+        &__description {
+            margin: 0;
+        }
+
+        &__button {
+            margin: 0;
+            justify-self: stretch;
+        }
+
+        &__bike-fix {
+            top: 265px + 74px + 60px + 40px;
+        }
+
+        &__bike-title {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: $screen-mobile) {
+        &__image-container {
+            min-height: 348px;
+        }
+
+        &__image {
+            width: 254px;
+            height: 348px;
+        }
+
+        &__bike-fix {
+            width: 234px;
+            height: 160px;
+            top: 136px + 74px + 40px + 40px;
+            margin-bottom: 37px;
+        }
+    }
+
+    @media screen and (max-width: 340px) {
+        &__bike-fix {
+            top: 136px + 74px + 80px + 40px;
+        }
+    }
+}

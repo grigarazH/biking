@@ -1,0 +1,257 @@
+.bikes {
+    padding: 0 120px 60px;
+    box-sizing: border-box;
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin: 60px 0 0;
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__types {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        gap: 40px;
+    }
+
+    &__type {
+        border: none;
+        background-color: transparent;
+        font: {
+            family: $default-font;
+            size: 18px;
+            weight: 400;
+        }
+        color: map-get($map: $theme-light, $key: color-primary);
+        line-height: 28px;
+        opacity: .7;
+        transition: opacity .2s linear .15s;
+        transition: font-weight .2s linear .15s;
+
+        &:hover {
+            opacity: .6;
+            cursor: pointer;
+        }
+
+        &_active {
+            font-weight: 600;
+            opacity: 1;
+
+            &:hover {
+                opacity: .75;
+            }
+        }
+
+        &_theme_dark {
+            color: map-get($map: $theme-dark, $key: color-primary);
+            
+            &:hover {
+                opacity: .5;
+            }
+
+            &.bikes__type_active:hover {
+                opacity: .65;
+            }
+        }
+    }
+
+    &__type-select {
+        display: none;
+    }
+
+    &__bike-list {
+        display: none;
+        margin: 120px 0 0;
+        list-style-type: none;
+        padding: 0;
+
+        &_active {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+    }
+
+    &__bike-container {
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        transition: opacity .2s linear .15s;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    &__bike-image {
+        box-sizing: border-box;
+        width: 380px;
+        height: 380px;
+        padding: 20px;
+        object-position: center;
+        object-fit: contain;
+        border-radius: 20px;
+        background: map-get($theme-light, color-background);
+        filter: drop-shadow(0 20px 140px rgba(black, .06));
+    }
+
+    &__bike-heading {
+        margin: 22px 0 0 6px;
+        font: {
+            family: $default-font;
+            size: 18px;
+            weight: 600;
+        }
+        line-height: 22px;
+        color: map-get($map: $theme-light, $key: color-primary);
+
+        &_theme_dark {
+            color: map-get($map: $theme-dark, $key: color-primary);
+        }
+    }
+
+    &__paginator {
+        display: none;
+    }
+
+    @media screen and (max-width: $screen-medium) {
+        padding: 0 18px 60px;
+    }
+
+    @media screen and (max-width: 1231px) {
+        &__bike-list {
+            overflow-x: scroll;
+            margin: 0 0 -160px;
+            padding: 120px 0 160px;
+
+            &_active {
+                justify-content: start;
+            }
+        }
+    }
+
+    @media screen and (max-width: 679px) {
+        padding: 40px 18px 40px;
+        &::before {
+            @include section-separator($theme-light);
+        }
+
+        &__heading {
+            margin: 40px 0 0;
+        }
+        &__types {
+            display: none;
+        }
+
+        &__type-select {
+            margin: 40px 0 0;
+            display: block;
+            padding: 8px 0 8px 12px;
+            font: {
+                family: $default-font;
+                size: 18px;
+                weight: 600;
+            }
+            color: map-get($map: $theme-light, $key: color-primary);
+            line-height: 18px;
+            max-width: 150px;
+            width: 100%;
+            appearance: none;
+            background-image: url(../../images/select.svg);
+            background-size: 12px 7px;
+            background-position: right 12px top 50%;
+            background-repeat: no-repeat;
+            border: 1px solid map-get($map: $theme-light, $key: color-border);
+            border-radius: 2px;
+
+            &_theme_dark {
+                color: map-get($map: $theme-dark, $key: color-primary);
+                background-color: map-get($theme-dark, $key: color-background);
+                background-image: url(../../images/select-dark.svg);
+                border: 1px solid map-get($map: $theme-dark, $key: color-border);
+            }
+        }
+
+        &__bike-list {
+            overflow-x: hidden;
+            margin: 20px auto 0;
+            padding: 0;
+            max-width: 380px;
+            box-sizing: border-box;
+            filter: drop-shadow(0 20px 140px rgba(black, .06));
+        }
+
+        &__bike-image {
+            width: 380px;
+            height: 400px;
+            padding: 20px 20px 40px;
+            filter: none;
+        }
+
+        &__bike-container {
+            width: 380px;
+            height: 400px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 20px;
+            position: relative;
+            transition: transform .4s linear .2s;
+        }
+
+        &__bike-heading {
+            position: absolute;
+            bottom: 16px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            
+            &_theme_dark {
+                color: map-get($map: $theme-light, $key: color-primary);
+            }
+        }
+
+        &__paginator {
+            margin: 20px 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        &_theme_dark {
+            &::before {
+                @include section-separator($theme-dark);
+            }
+        }
+    }
+
+    @media screen and (max-width: 574px) {
+        &__bike-image {
+            width: 284px;
+            height: 306px;
+            padding: 14.95px 14.95px 36.95px;
+        }
+
+        &__bike-container {
+            width: 284px;
+            height: 306px;
+        }
+
+        &__bike-list {
+            max-width: 284px;
+        }
+
+        &__type-select {
+            font-size: 11px;
+            line-height: 14px;
+            max-width: 114px;
+        }
+    }
+}

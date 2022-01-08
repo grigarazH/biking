@@ -1,0 +1,36 @@
+$default-font: 'Inter', Arial, sans-serif;
+
+$theme-light: (
+  color-primary: #151515,
+  color-secondary: #222222,
+  color-background: #f4f4f4,
+  color-accent: #24b47e,
+  color-accent-secondary: #319e75,
+  color-button: #ebebeb,
+  color-border: #e3e3e3,
+  color-footer-border: #c7c7c7,
+  color-footer: #cfcfcf,
+  color-footer-background: #efefef,
+  color-paginator: #cacaca,
+  color-bike-line: #d7d4d4,
+);
+
+$theme-dark: (
+  color-primary: #fff,
+  color-secondary: #e6e6e6,
+  color-background: #333,
+  color-accent: #24b47e,
+  color-accent-secondary: #319e75,
+  color-button: #434343,
+  color-border: #3f3f3f,
+  color-footer-border: #7d7d7d,
+  color-footer: #676767,
+  color-footer-background: #2f2f2f,
+  color-bike-line: #707070,
+);
+
+$screen-medium: 1389px;
+
+$screen-tablet: 1079px;
+
+$screen-mobile: 574px;
